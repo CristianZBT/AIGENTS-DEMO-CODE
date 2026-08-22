@@ -1,0 +1,12 @@
+node_modules/
+package-lock.json
+.env*
+*.local.md
+*.log
+*.tmp
+
+# Editor / sistema operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,55 @@
+Licencia de la demostración pública — AIGENTS
+
+Copyright (c) 2026 Cristian Zubieta. Todos los derechos reservados.
+
+AIGENTS es software propietario. No es software libre ni de código abierto.
+Este repositorio publica una demostración compilada del producto, con datos
+simulados, con el único fin de mostrar cómo funciona.
+
+
+1. Qué contiene este repositorio
+
+  a) `index.html`: La aplicación real, concatenada y minificada, corriendo
+     sobre un catálogo de ejemplo. Los datos son inventados y no corresponden
+     a ninguna cuenta real.
+  b) `assets/screens/`: Capturas de esa misma demostración.
+  c) Tipografías IBM Plex (SIL Open Font License 1.1) y SheetJS Community
+     Edition (Apache 2.0), que conservan sus propias licencias.
+
+No contiene el código fuente del producto, ni el backend, ni el esquema de
+datos, ni las credenciales de ninguna instalación.
+
+
+2. Actos prohibidos
+
+Salvo autorización previa y por escrito del titular, queda prohibido:
+
+  a) copiar, reproducir, publicar o distribuir el contenido de este
+     repositorio, total o parcialmente, fuera de la consulta directa;
+  b) modificar, adaptar o crear obras derivadas;
+  c) sublicenciar, vender, alquilar, ceder o transferir cualquier derecho;
+  d) usarlo para prestar un servicio a terceros, o para desarrollar, entrenar
+     o comercializar un producto que compita con AIGENTS;
+  e) aplicar ingeniería inversa sobre el código publicado, salvo en la medida
+     en que la ley aplicable lo permita de forma imperativa y no renunciable.
+
+Mirar la demostración, probarla y compartir su enlace no está alcanzado por
+ninguna de estas prohibiciones: Para eso está publicada.
+
+
+3. Sin garantía
+
+Se entrega "tal cual", sin garantía de ningún tipo, expresa o implícita. El
+titular no responde por daños derivados de su uso, en la medida en que la ley
+aplicable lo permita.
+
+
+4. Versiones anteriores
+
+Hasta el 17 de agosto de 2026 este repositorio declaró licencia MIT, bajo el
+nombre anterior del producto. Esta licencia rige desde esa fecha en adelante y
+no pretende revocar derechos ya adquiridos por quien haya obtenido lícitamente
+una copia bajo los términos anteriores.
+
+
+Contacto: cristianzbt@gmail.com
