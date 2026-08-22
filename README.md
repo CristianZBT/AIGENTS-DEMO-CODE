@@ -10,7 +10,7 @@ Este repositorio publica una demostración navegable de AIGENTS. Es la aplicaci�
 
 No pide registro ni instala nada: Entra directo al panel. Todos los números son inventados y la cinta superior lo dice en todo momento. Si quieres ver la pantalla de acceso, agrega `?acceso=1` al final de la dirección.
 
-**Es la aplicación completa, no una maqueta.** El mismo frontend que corre en producción —los mismos módulos, el mismo armazón, el mismo motor de marca— con la capa de datos reemplazada por un catálogo en memoria. Las once secciones se navegan de verdad: Pestañas, atajos de teclado, orden y filtrado de tablas, paginación, fichas de detalle, cambio de tema y edición de la identidad visual. Las escrituras también funcionan: Pausar una publicación baja el contador de activas en la cinta de arriba, y Lucro Cesante empieza a cobrarte esa pausa.
+**Es la aplicación completa, no una maqueta.** El mismo frontend que corre en producción —los mismos módulos, el mismo armazón, el mismo motor de marca— con la capa de datos reemplazada por un catálogo en memoria. Las doce secciones se navegan de verdad: Pestañas, atajos de teclado, orden y filtrado de tablas, paginación, fichas de detalle, cambio de tema y edición de la identidad visual. Las escrituras también funcionan: Pausar una publicación baja el contador de activas en la cinta de arriba, y Lucro Cesante empieza a cobrarte esa pausa.
 
 ---
 
@@ -22,7 +22,7 @@ MercadoLibre dice que una publicación está pausada, pero no cuándo dejó de v
 
 AIGENTS guarda su propia foto del catálogo en cada barrido, y de ahí saca los «cuándo» y los «cuánto» que la API no entrega. Eso es lo que después le permite a un agente avisar a tiempo en vez de solo informar.
 
-## Las once secciones
+## Las doce secciones
 
 | Sección | Qué muestra |
 |---|---|
@@ -36,17 +36,22 @@ AIGENTS guarda su propia foto del catálogo en cada barrido, y de ahí saca los 
 | **Competencia** | Los productos que se eligió vigilar, con hasta cuatro competidores cada uno: Quién está más barato y por cuánto. |
 | **Opiniones** | Qué dicen los compradores de lo vendido en los últimos 60 días, con tres lentes: Calificación baja, negativas recientes y mejor valoradas. |
 | **Preguntas** | De qué preguntan los compradores agrupado por tema, qué publicaciones generan más dudas por venta y cuáles venden sin recibir ninguna. |
+| **Cash Inflow** | Cuánta comisión cobró MercadoLibre por ventas que después se cayeron, y cuánta de esa plata no devolvió. Con la inversión y la facturación de Product Ads mes a mes. |
 | **Identidad de marca** | Nombre, logotipo y colores de la empresa, con detección automática de los colores del logotipo y lectura del contraste resultante. |
 
 ![Mi MercadoLibre](assets/screens/02-mercadolibre.png)
 
 ![Control Bultos](assets/screens/07-control-bultos.png)
 
-### Y una doceava que no viaja a la demo: Cash Inflow
+### Cash Inflow: La plata que ya te cobraron
 
-Mide cuánta comisión cobró MercadoLibre por ventas que después se cayeron, y cuánta de esa plata no devolvió. Está ordenada por el hallazgo que la explica, que no es el que uno esperaría: **lo que vuelve no depende del monto ni del mes, sino de hasta dónde llegó el producto.** Si la venta ni se despachó, MercadoLibre devuelve la comisión nueve de cada diez veces; si el comprador llegó a recibirla, poco más de la mitad. Ese gradiente es lo que separa la plata que conviene reclamar de la que probablemente sea criterio de MercadoLibre y no un olvido. Incluye también la inversión y la facturación de Product Ads mes a mes.
+Mide cuánta comisión cobró MercadoLibre por ventas que después se cayeron, y cuánta de esa plata no devolvió. Está ordenada por el hallazgo que la explica, que no es el que uno esperaría: **Lo que vuelve no depende del monto ni del mes, sino de hasta dónde llegó el producto.** Si la venta ni se despachó, MercadoLibre devuelve la comisión nueve de cada diez veces; si el comprador llegó a recibirla, poco más de la mitad. Ese gradiente es lo que separa la plata que conviene reclamar de la que probablemente sea criterio de MercadoLibre y no un olvido. Incluye también la inversión y la facturación de Product Ads mes a mes.
 
-No está en esta demostración, y el motivo es el mismo que la hace útil: cada fila es una venta caída real, con su número de orden y el nombre de quien compró. No hay forma honesta de simularla —un catálogo inventado no tiene facturas que cruzar— y no vamos a publicar las verdaderas.
+Es la única sección que existe sólo en oscuro, y el panel cambia de tema al entrar: Se lee sobre un cielo con estrellas, y lo que ya venció el plazo se muestra en llamas porque no vuelve solo. En la barra está detrás de «Más», o directo con **Ctrl+9**.
+
+![Cash Inflow](assets/screens/13-cash-inflow.png)
+
+**Sobre la columna «Comprador».** En una cuenta real cada fila lleva el apodo de quien compró, y eso no puede viajar a un repositorio público. Acá va anonimizado por construcción —`COMPRADOR-9510`—, que no es el apodo de nadie ni se parece a uno: Preferimos un identificador evidentemente sintético antes que inventar nombres verosímiles. Todo lo demás de la sección funciona igual que en producción.
 
 ---
 
@@ -54,9 +59,9 @@ No está en esta demostración, y el motivo es el mismo que la hace útil: cada 
 
 Sasha es la voz, pero no es el único lugar donde los Agentes hablan. **Cada frase que empieza con «▸» es la lectura de un Agente sobre los datos que están justo arriba**, redactada en el momento a partir de esos números — no es un texto de ayuda escrito de antemano ni una descripción de la sección.
 
-> ▸ El 41% de las ventas se cae el mismo día en que se vendió: el comprador se arrepiente antes de que salga el paquete.
+> ▸ El 30% de las ventas se cae el mismo día en que se vendió: El comprador se arrepiente antes de que salga el paquete.
 
-La diferencia con un rótulo es que el rótulo dice *qué* es el número y el Agente dice *qué significa*, incluso cuando incomoda: por qué una columna está vacía y no en cero, qué mes todavía no se puede saber, cuál de dos cifras parecidas es la que conviene mirar primero. Si los datos cambian, la frase cambia; si no hay nada que señalar, no aparece.
+La diferencia con un rótulo es que el rótulo dice *qué* es el número y el Agente dice *qué significa*, incluso cuando incomoda: Por qué una columna está vacía y no en cero, qué mes todavía no se puede saber, cuál de dos cifras parecidas es la que conviene mirar primero. Si los datos cambian, la frase cambia; si no hay nada que señalar, no aparece.
 
 Están repartidas por todo el panel, así que se cruzan navegando la demo. Es la misma idea que sostiene a Sasha —no informar, sino decir qué hacer con lo informado— puesta donde el operador ya está mirando.
 
